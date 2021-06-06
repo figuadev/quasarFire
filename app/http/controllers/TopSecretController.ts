@@ -9,15 +9,16 @@ export class TopSecretController {
   }
 
   setMessageAll(args: { satellites: any }): any {
-    PromiseB.try(() => {
+    return PromiseB.try(() => {
       //TODO: Remove this
       console.log(args);
       this.logger.imp("[setMessageAll]", true);
+      return true;
     });
   }
 
   setMessage(args: { position: number; message: string }): any {
-    PromiseB.try(() => {
+    return PromiseB.try(() => {
       //TODO: Remove this
       console.log(args);
       this.logger.imp("[setMessage]", true);
@@ -25,7 +26,7 @@ export class TopSecretController {
   }
 
   getTopSecretMessage(): any {
-    PromiseB.try(() => {
+    return PromiseB.try(() => {
       this.logger.imp("[getTopSecretMessage]", true);
     });
   }
