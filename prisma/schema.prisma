@@ -1,0 +1,8 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DSN")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}

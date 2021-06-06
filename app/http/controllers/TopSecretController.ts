@@ -1,5 +1,6 @@
 import PromiseB from "bluebird";
 import Logger from "jet-logger";
+import { Request, Response } from "express";
 
 export class TopSecretController {
   private logger: Logger;
@@ -8,26 +9,30 @@ export class TopSecretController {
     this.logger = args.logger;
   }
 
-  setMessageAll(args: { satellites: any }): any {
+  setMessageAll(_req: Request, res: Response): any {
     return PromiseB.try(() => {
-      //TODO: Remove this
-      console.log(args);
       this.logger.imp("[setMessageAll]", true);
-      return true;
+      res.send(true);
+    }).catch(() => {
+      res.status(404).json("No se pudo determinar la posición y/o el mensaje");
     });
   }
 
-  setMessage(args: { position: number; message: string }): any {
+  setMessage(_req: Request, res: Response): any {
     return PromiseB.try(() => {
-      //TODO: Remove this
-      console.log(args);
       this.logger.imp("[setMessage]", true);
+      res.send(true);
+    }).catch(() => {
+      return res.status(500).json("No hay suficiente informacion");
     });
   }
 
-  getTopSecretMessage(): any {
+  getTopSecretMessage(_req: Request, res: Response): any {
     return PromiseB.try(() => {
       this.logger.imp("[getTopSecretMessage]", true);
+      res.send(true);
+    }).catch(() => {
+      return res.status(500).json("No hay suficiente informacion");
     });
   }
 }
