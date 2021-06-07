@@ -1,4 +1,6 @@
 export class DecryptMessageAllSatellites {
-  //TODO:
+  //TODO: Implement RebelAlliance method call here?
   constructor() {}
+
+  execute() {}
 }

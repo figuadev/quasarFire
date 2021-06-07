@@ -1,7 +1,7 @@
-import { ICargoShip } from "../Interfaces/ICargoShip";
+import { IImperialCargoShip } from "../Interfaces/IImperialCargoShip";
 import { PositionCoordinates } from "../Types/PositionCoordinates";
 
-export class CargoShip implements ICargoShip {
+export class ImperialCargoShip implements IImperialCargoShip {
   private _fullMessage: string[];
   private _position: PositionCoordinates;
 

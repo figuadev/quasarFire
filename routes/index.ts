@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { TopSecretController } from "../app/http/controllers/TopSecretController";
-import logger from "../shared/Logger";
+import logger from "../src/Infrastructure/Logger/Logger";
 import { CheckInputSetMessageAllMw } from "../app/http/middleware/CheckInputSetMessageAllMw";
 import { CheckInputSetMessageMw } from "../app/http/middleware/CheckInputSetMessageMw";
 

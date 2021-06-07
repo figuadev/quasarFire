@@ -1,7 +1,7 @@
 import morgan from "morgan";
 import helmet from "helmet";
 import express, { Request, Response, NextFunction, Express } from "express";
-import logger from "./shared/Logger";
+import logger from "./src/Infrastructure/Logger/Logger";
 import router from "./routes";
 import createHttpError from "http-errors";
 import StatusCodes from "http-status-codes";

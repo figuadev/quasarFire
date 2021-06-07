@@ -1,6 +1,6 @@
 import { PositionCoordinates } from "../Types/PositionCoordinates";
 
-export interface ISatellite {
+export interface IRebelSatellite {
   name: string;
   distance: number;
   message: string[];
